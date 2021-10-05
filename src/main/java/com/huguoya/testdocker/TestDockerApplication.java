@@ -14,6 +14,7 @@ public class TestDockerApplication {
 
     public static void main(String[] args) {
         log.info("project start" + LocalDateTime.now());
+
         ConfigurableApplicationContext context = SpringApplication.run(TestDockerApplication.class, args);
         System.out.println("http://localhost:" + context.getBean(YmlConfig.class).getPort() + "/doc.html");
     }
